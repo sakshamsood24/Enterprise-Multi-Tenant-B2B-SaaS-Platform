@@ -20,6 +20,12 @@ The demo domain is an asset and vendor operations platform: each company manages
 - [middleware.ts](middleware.ts) — session refresh and dashboard protection
 - [app/api/assets/route.ts](app/api/assets/route.ts) — tenant-safe API reads/writes
 - [app/api/vendors/route.ts](app/api/vendors/route.ts) — heavy operation protected by subscription tier and tenant rate limit
+- [docs/automation.md](docs/automation.md) — safe automated maintenance rules
+
+## Automation
+
+The repository includes a weekly/manual GitHub Actions workflow at `.github/workflows/auto-maintenance.yml`.
+It applies deterministic ESLint fixes, verifies typecheck and production build, and commits only if safe generated fixes changed files.
 
 ## Local setup
 
